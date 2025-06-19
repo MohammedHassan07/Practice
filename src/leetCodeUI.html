@@ -42,8 +42,8 @@
         }
 
         /* left header */
-        .left-header span{
-            
+        .left-header span {
+
             margin: 0px 5px;
         }
 
@@ -73,12 +73,13 @@
 
         .bi-bug {
             border-top-left-radius: 6px;
-            ;
             border-bottom-left-radius: 6px;
+            margin-right: -2px;
         }
 
         .bi-play-fill {
-            margin: 0px -3px;
+
+            margin-right: -4px;
         }
 
         .bi-cloud-arrow-up {
@@ -86,7 +87,7 @@
             border-top-right-radius: 6px;
             ;
             border-bottom-right-radius: 6px;
-            color: green;
+            color: rgb(40, 204, 40);
         }
 
         .bi-sticky {
@@ -104,7 +105,7 @@
         }
 
         .bi-stopwatch {
-            color: rgb(64, 86, 184);
+            color: hsl(209 100% 55%);
         }
 
         .premium {
@@ -114,14 +115,64 @@
             padding: 6px 12px;
             color: orange;
         }
+
         /* right-header ends */
 
         .left-panel,
         .right-panel {
 
             height: 600px;
-            border: 2px solid gray;
+            border: 1px solid gray;
             border-radius: 6px;
+        }
+
+        .left-panel-header,
+        .right-panel-header {
+            margin-top: -2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #353535;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+            color: rgb(149, 149, 149);
+        }
+
+        .bi-arrow-counterclockwise,
+        .bi-flask,
+        .bi-file-text {
+            color: hsl(209 100% 55%);
+        }
+
+        .bi-book {
+            color: orange;
+        }
+
+        .bi-arrow-counterclockwise span,
+        .bi-flask span,
+        .bi-file-text span,
+        .bi-book span {
+            color: rgb(149, 149, 149);
+        }
+
+        .bi-code-slash {
+            color: rgb(40, 204, 40);
+        }
+
+        .bi-code-slash span {
+            color: white
+        }
+
+        .panel-body {
+
+            background-color: #1a1a1a;
+            height: 100%;
+        }
+
+        .problem-name {
+            font-weight: bold;
+            color: white;
+            font-size: x-large;
         }
     </style>
 </head>
@@ -146,7 +197,7 @@
         <div class="mid-header">
             <span class="bi bi-bug"></span>
             <span class="bi bi-play-fill"></span>
-            <span class="bi bi-cloud-arrow-up">Submit</span>
+            <span class="bi bi-cloud-arrow-up"> Submit</span>
             <span class="bi bi-sticky"></span>
         </div>
 
@@ -165,10 +216,71 @@
     <section>
 
         <!-- left -->
-        <div class="left-panel"></div>
+        <div class="left-panel">
+
+            <div class="left-panel-header">
+                <div>
+                    <span class="bi bi-file-text">
+                        <span>
+                            Descriptions
+                        </span>
+                    </span>
+                    <span class="bi bi-book">
+                        <span>
+                            Editorial
+                        </span>
+                    </span>
+                    <span class="bi bi-flask">
+                        <span>
+                            Solution
+                        </span>
+                    </span>
+                    <span class="bi bi-arrow-counterclockwise">
+                        <span>
+                            Submissions
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <span class="bi bi-fullscreen"></span>
+                    <span class="bi bi-chevron-left"></span>
+                </div>
+            </div>
+
+            <div class="panel-body left-panel-body">
+
+                <h3 class="problem-name">
+                    2667. Create Hello World Function
+                </h3>
+                <span>Easy</span>
+                <span>Companies</span>
+                <div>Write a function <samp>createHelloWorld</samp>. It should return a new function that always returns
+                    <samp> "Hello World"</samp>.</div>
+            </div>
+        </div>
 
         <!-- right -->
-        <div class="right-panel"></div>
+        <div class="right-panel">
+
+            <div class="right-panel-header">
+
+                <div>
+                    <span class="bi bi-code-slash">
+                        <span>
+                            Code
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <span class="bi bi-fullscreen"></span>
+                    <span class="bi bi-chevron-up"></span>
+                </div>
+            </div>
+
+            <div class="panel-body right-panel-body">
+
+            </div>
+        </div>
     </section>
 
 
