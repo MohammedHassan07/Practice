@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Leet Code UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        section {
+
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 6px;
+            margin-top: 5px;
+        }
+
+        .left-header,
+        .mid-header,
+        .right-header {
+            color: rgb(172, 172, 172);
+            cursor: pointer;
+        }
+
+        /* left header */
+        .left-header span{
+            
+            margin: 0px 5px;
+        }
+
+        /* left header ends*/
+        .leet-code-logo {
+
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url('https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bi-javascript {
+            color: white;
+            background-image: linear-gradient(rgb(206, 161, 14), rgb(221, 203, 41));
+            border-radius: 4px;
+        }
+
+        /* mid-header */
+        .mid-header span {
+            background-color: rgb(54, 54, 54);
+            padding: 5px;
+
+        }
+
+        .bi-bug {
+            border-top-left-radius: 6px;
+            ;
+            border-bottom-left-radius: 6px;
+        }
+
+        .bi-play-fill {
+            margin: 0px -3px;
+        }
+
+        .bi-cloud-arrow-up {
+
+            border-top-right-radius: 6px;
+            ;
+            border-bottom-right-radius: 6px;
+            color: green;
+        }
+
+        .bi-sticky {
+            border-radius: 6px;
+            margin-left: 3px;
+        }
+
+        /* mid header ends */
+
+        /* right-header */
+
+        .right-header span {
+
+            margin: 0px 5px;
+        }
+
+        .bi-stopwatch {
+            color: rgb(64, 86, 184);
+        }
+
+        .premium {
+
+            background-color: rgba(182, 127, 27, 0.2);
+            border-radius: 6px;
+            padding: 6px 12px;
+            color: orange;
+        }
+        /* right-header ends */
+
+        .left-panel,
+        .right-panel {
+
+            height: 600px;
+            border: 2px solid gray;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+
+        <!-- right -->
+        <div class="left-header">
+            <span class="leet-code-logo"></span>
+            <span class="bi bi-javascript"></span>
+            <span>30 Days of JavaScript</span>
+            <span class="bi bi-chevron-left"></span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+
+        </div>
+
+        <!-- mid -->
+        <div class="mid-header">
+            <span class="bi bi-bug"></span>
+            <span class="bi bi-play-fill"></span>
+            <span class="bi bi-cloud-arrow-up">Submit</span>
+            <span class="bi bi-sticky"></span>
+        </div>
+
+        <!-- left -->
+        <div class="right-header">
+            <span class="bi bi-columns-gap"></span>
+            <span class="bi bi-gear"></span>
+            <span class="bi bi-stopwatch"></span>
+            <span class="">Register</span>
+            <span class="">or</span>
+            <span class="">Sign in</span>
+            <span class="premium">Premium</span>
+        </div>
+    </header>
+
+    <section>
+
+        <!-- left -->
+        <div class="left-panel"></div>
+
+        <!-- right -->
+        <div class="right-panel"></div>
+    </section>
+
+
+</body>
+
+</html>
