@@ -236,7 +236,7 @@
         }
 
         samp {
-           
+
             border: 2px solid #353535;
             border-radius: 6px;
             font-size: 13px;
@@ -271,12 +271,21 @@
         .code-panel-body {
             height: 280px;
             overflow: scroll;
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+        }
+
+        ol {
+            color: white;
+            font-size: 14px;
         }
 
         code {
             padding: 13px;
             color: white;
+            margin-top: 12px;
         }
+
         .code-line-col {
             padding: 8px;
             font-size: 12px;
@@ -465,8 +474,8 @@
     The function returned by createHelloWorld should always return "Hello
     World".
                     </pre>
-        <h4>Example 2:</h4>
-        <pre>
+                    <h4>Example 2:</h4>
+                    <pre>
     Input: args = [{},null,42]
     Output: "Hello World"
     Explanation:
@@ -523,42 +532,32 @@
                         <div class="code-panel-body">
 
                             <!-- line number -->
-                            <div></div>
+                            <div>
+                                <ol type="1">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                            </div>
 
                             <!-- write code here  -->
-                            <code style="padding: 3px;">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore
-                                laudantium
-                                vitae
-                                accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
-                                tenetur
-                                provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
-                                pariatur
-                                officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore
-                                laudantium
-                                vitae
-                                accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
-                                tenetur
-                                provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
-                                pariatur
-                                officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore
-                                laudantium
-                                vitae
-                                accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
-                                tenetur
-                                provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
-                                pariatur
-                                officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore
-                                laudantium
-                                vitae
-                                accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
-                                tenetur
-                                provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
-                                pariatur
-                                officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
+                            <code><pre>
+/**
+* @return {Function}
+*/
+var createHelloWorld = function() {
+
+return function(...args) {
+
+}
+};
+
+/**
+* const f = createHelloWorld();
+* f(); // "Hello World"
+                            </pre>
                             </code>
                         </div>
                         <div class="container code-line-col">
