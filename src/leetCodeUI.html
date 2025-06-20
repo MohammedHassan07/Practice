@@ -14,6 +14,12 @@
             box-sizing: border-box;
         }
 
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         body {
 
             background-color: rgb(0, 0, 0);
@@ -85,7 +91,6 @@
         .bi-cloud-arrow-up {
 
             border-top-right-radius: 6px;
-            ;
             border-bottom-right-radius: 6px;
             color: rgb(40, 204, 40);
         }
@@ -118,12 +123,24 @@
 
         /* right-header ends */
 
+
+        .left-panel {
+            overflow: scroll;
+
+        }
+
+        .right-panel {
+            overflow: hidden;
+        }
+
         .left-panel,
         .right-panel {
 
-            height: 600px;
+            height: 599px;
+            width: 49vw;
             border: 1px solid gray;
             border-radius: 6px;
+
         }
 
         .left-panel-header,
@@ -136,6 +153,19 @@
             border-top-right-radius: 6px;
             border-top-left-radius: 6px;
             color: rgb(149, 149, 149);
+            position: sticky;
+            top: 0;
+        }
+
+        .left-panel-header {
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .left-panel-header span:hover {
+
+            background-color: #484848;
+            border-radius: 6px;
         }
 
         .bi-arrow-counterclockwise,
@@ -160,19 +190,68 @@
         }
 
         .bi-code-slash span {
-            color: white
+            color: white;
         }
 
         .panel-body {
 
             background-color: #1a1a1a;
             height: 100%;
+            width: 100%;
+        }
+
+        .left-panel-body {
+            padding: 24px 12px;
         }
 
         .problem-name {
             font-weight: bold;
             color: white;
             font-size: x-large;
+        }
+
+        .problem-stmt {
+            color: white;
+        }
+
+        .right-panel-sub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.5px solid #353535;
+            background-color: #1a1a1a;
+            position: sticky;
+            top: 0px;
+            margin-bottom: -3px;
+        }
+
+        .right-panel-sub-header span {
+
+            color: rgb(149, 149, 149);
+            cursor: pointer;
+        }
+
+        .right-panel-sub-header span:hover {
+
+            background-color: #353535;
+            border-radius: 6px;
+        }
+
+        .code-panel-body {
+            height: 280px;
+            overflow: scroll;
+        }
+
+        .code-line-col {
+            color: white;
+        }
+
+        .bottom-code-container {
+            background-color: #0a84ff2e;
+            color: rgb(240, 240, 240);
+            padding: 6px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
         }
     </style>
 </head>
@@ -254,31 +333,138 @@
                 </h3>
                 <span>Easy</span>
                 <span>Companies</span>
-                <div>Write a function <samp>createHelloWorld</samp>. It should return a new function that always returns
-                    <samp> "Hello World"</samp>.</div>
+                <div class="problem-stmt">Write a function <samp>createHelloWorld</samp>. It should return a new
+                    function that always returns
+                    <samp> "Hello World"</samp>.
+                </div>
+                <div>
+                    <h4>Example 1:</h4>
+                    <pre>
+                Input: args = []
+                Output: "Hello World"
+                Explanation:
+                const f = createHelloWorld();
+                f(); // "Hello World"
+                                    
+                The function returned by createHelloWorld should always return "Hello
+                World".
+                    </pre>
+
+                    <h4>Example 2:</h4>
+                    <pre>
+                Input: args = [{},null,42]
+                Output: "Hello World"
+                Explanation:
+                const f = createHelloWorld();
+                f({}, null, 42); // "Hello World"
+                
+                Any arguments could be passed to the function but it should still always 
+                return "Hello World".                        
+                    </pre>
+
+                    <h4>Constraints:</h4>
+                    <samp>0 &lt;= args.length &lt; = 10</samp>
+                </div>
             </div>
         </div>
 
         <!-- right -->
         <div class="right-panel">
 
-            <div class="right-panel-header">
+            <div>
 
-                <div>
-                    <span class="bi bi-code-slash">
-                        <span>
-                            Code
+                <div class="right-panel-header">
+                    <div>
+                        <span class="bi bi-code-slash">
+                            <span>
+                                Code
+                            </span>
                         </span>
-                    </span>
+                    </div>
+                    <div>
+                        <span class="bi bi-fullscreen"></span>
+                        <span class="bi bi-chevron-up"></span>
+                    </div>
                 </div>
-                <div>
-                    <span class="bi bi-fullscreen"></span>
-                    <span class="bi bi-chevron-up"></span>
+
+                <div class="right-panel-sub-header">
+                    <div>
+                        <span>JavaScript</span>
+                        <span class="bi bi-chevron-down"></span>
+
+                        <span class="bi bi-dot">Auto</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-bookmark"></span>
+                        <span class="bi bi-braces"></span>
+                        <span class="bi bi-arrow-counterclockwise"></span>
+                        <span class="bi bi-arrows-angle-expand"></span>
+                    </div>
                 </div>
+
             </div>
 
             <div class="panel-body right-panel-body">
 
+                <div class="code-panel">
+
+                    <div class="code-panel-body">
+
+                        <!-- line number -->
+                        <div></div>
+
+                        <!-- write code here  -->
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore laudantium
+                            vitae
+                            accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
+                            tenetur
+                            provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
+                            pariatur
+                            officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore laudantium
+                            vitae
+                            accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
+                            tenetur
+                            provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
+                            pariatur
+                            officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore laudantium
+                            vitae
+                            accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
+                            tenetur
+                            provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
+                            pariatur
+                            officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolor. Labore laudantium
+                            vitae
+                            accusantium velit deserunt, qui dicta nesciunt. Debitis harum ducimus quod quis qui enim
+                            tenetur
+                            provident voluptas praesentium vel? Fuga quod sit tempore excepturi iure repellendus
+                            pariatur
+                            officia consequuntur itaque, hic, unde sapiente totam dignissimos vitae beatae aperiam.
+                        </div>
+                    </div>
+                    <div class="container code-line-col">
+
+                        <div>
+                            <span>Saved</span>
+                        </div>
+                        <div>
+                            <span>Ln 1, Col 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-code-container">
+                    <span>You Need to </span>
+                    <span>Login / Sign Up</span>
+                    <span>to run or submit</span>
+                </div>
+
+                <!-- test case and result -->
+                <div>
+
+                </div>
             </div>
         </div>
     </section>
